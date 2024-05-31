@@ -22,17 +22,17 @@ createApp({
         });
     },
     //function för next-knapp
-    displayNextEmployee() {
+    displayNextEmployees() {
       if (this.currentPage < this.totalPages) {
         this.currentPage++;
-        this.DisplayUsers(this.currentPage);
+        this.displayUsers(this.currentPage);
       }
     },
     //function för previous-knapp
     displayPreviousEmployee() {
       if (this.currentPage >= this.totalPages) {
         this.currentPage--;
-        this.DisplayUsers(this.currentPage);
+        this.displayUsers(this.currentPage);
       }
     },
   },
