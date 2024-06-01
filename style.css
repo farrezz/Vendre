@@ -111,7 +111,8 @@ button:hover {
 }
 
 .clicked {
-   color: #e5383b;
+   color: #4f4f4f;
+   background-color: #9B9B9B 
 }
 .unclicked {
 color: white;
@@ -254,5 +255,6 @@ color: white;
       width: 80px;
     }
   }
+
 }
   
