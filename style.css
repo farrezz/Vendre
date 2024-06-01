@@ -18,14 +18,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100svh;
   width: 100vw;
+  padding: 30px;
 }
 
 .card-container {
-  width: 40%;
+
   height: 100%;
-  padding: 70px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -63,7 +64,7 @@ a {
 }
 
 a:hover {
-    color: green;
+    color: #00b4d8;
     text-decoration: none;
     font-size: 15px;
 }
@@ -96,6 +97,7 @@ button {
 font-family: Verdana, Geneva, Tahoma, sans-serif;
   border-radius: 16px;
   width: 100px;
+  height: 30px;
   background-color: transparent;
   border: solid 1px rgba(255, 255, 255, 1);
 }
@@ -109,10 +111,10 @@ button:hover {
 }
 
 .clicked {
-    opacity: 0; 
+   color: #e5383b;
 }
 .unclicked {
-    opacity: 1;
+color: white;
 }
 
 /*Ipad air (820 X 1180)*/
@@ -162,6 +164,9 @@ button:hover {
 
   /*Ipad air (1180 X 820) horizontally*/
 @media (max-width: 1180px) {
+
+
+  
     .card-container {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -202,30 +207,32 @@ button:hover {
 
     button {
       padding: 8px;
+      align-items: center;
+      color: white;
     }
   }
 
 
   /*Iphone 14 Pro max*/
   @media (max-width: 430px) {
+
     .card-container {
       grid-template-columns: repeat(2, 1fr); 
       justify-content: center;
-      margin: 2px; 
       gap: 8px; 
     }
   
     .card {
-      width: 150px; 
+      width: 130px; 
       height: 200px;
       padding: 15px;
-      min-height: 180px; 
+      min-height: 100px; 
       max-height: 250px; 
     }
   
     img {
-      width: 100px;
-      height: 100px;
+      width: 80px;
+      height: 80px;
     }
   
     a {
@@ -240,7 +247,7 @@ button:hover {
     #button-container {
       flex-direction: row;
       gap: 10px;
-      margin-top: 40px;
+
     }
   
     button {
