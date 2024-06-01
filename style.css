@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  height: 100vh;
+  width: 100vw;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100svh;
+  width: 100vw;
+}
+
+.card-container {
+  width: 40%;
+  height: 100%;
+  padding: 70px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.21);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.9px);
+  -webkit-backdrop-filter: blur(12.9px);
+  border: 1px solid rgba(255, 255, 255, 1);
+  /*------------*/
+  justify-self: center;
+  width: 200px;
+  height: 250x;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 1);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+a:hover {
+    color: green;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+#displayName {
+  color: white;
+  font-size: 23px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+#text-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#button-container {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  gap: 50px;
+  margin: 50px;
+}
+
+button {
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 16px;
+  width: 100px;
+  background-color: transparent;
+  border: solid 1px rgba(255, 255, 255, 1);
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.21);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.9px);
+  -webkit-backdrop-filter: blur(12.9px);
+}
+
+.clicked {
+    opacity: 0; 
+}
+.unclicked {
+    opacity: 1;
+}
+
+/*Ipad air (820 X 1180)*/
+@media (max-width: 1024px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px; 
+        justify-content: center;
+        align-items: center;
+        height: 1000px;
+      }
+
+    .card {
+        width: 200px;
+        padding: 15px; 
+        min-height: 350px; 
+        max-height: 450px; 
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+
+      }
+    #displayName {
+      font-size: 20px;
+    }
+
+    a {
+      font-size: 11px; 
+    }
+
+    #button-container {
+        flex-direction: row;
+        gap: 10px; 
+        margin-top: 40px; 
+      }
+      
+      #text-container{
+        display: flex;
+        justify-content: center;
+      }
+
+    button {
+      padding: 8px;
+    }
+  }
+
+  /*Ipad air (1180 X 820) horizontally*/
+@media (max-width: 1180px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px; 
+        justify-content: center;
+        align-items: center;
+        height: 1000px;
+      }
+
+    .card {
+        width: 200px; 
+        height: 280px;
+        padding: 15px; 
+        min-height: 200px;
+        max-height: 450px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+
+      }
+    #displayName {
+      font-size: 20px; 
+
+    a {
+      font-size: 11px;
+    }
+
+    #button-container {
+        flex-direction: row;
+        gap: 10px; 
+        margin-top: 40px; 
+      }
+      
+      #text-container{
+        display: flex;
+        justify-content: center;
+      }
+
+    button {
+      padding: 8px;
+    }
+  }
+
+
+  /*Iphone 14 Pro max*/
+  @media (max-width: 430px) {
+    .card-container {
+      grid-template-columns: repeat(2, 1fr); 
+      justify-content: center;
+      margin: 2px; 
+      gap: 8px; 
+    }
+  
+    .card {
+      width: 150px; 
+      height: 200px;
+      padding: 15px;
+      min-height: 180px; 
+      max-height: 250px; 
+    }
+  
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  
+    a {
+      font-size: 8px;
+    }
+  
+    #displayName {
+      font-size: 16px;
+      text-align: center;
+    }
+  
+    #button-container {
+      flex-direction: row;
+      gap: 10px;
+      margin-top: 40px;
+    }
+  
+    button {
+      width: 80px;
+    }
+  }
+}
+  
