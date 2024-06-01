@@ -9,6 +9,8 @@ createApp({
       currentPage: 1,
       //antal sidor. (totalt 2 sidor)
       totalPages: 2,
+      previousBtn: 'clicked',
+      nextBtn: 'unclicked'
     };
   },
   //Logik delen
@@ -26,6 +28,7 @@ createApp({
       if (this.currentPage < this.totalPages) {
         this.currentPage++;
         this.displayUsers(this.currentPage);
+        this.nextBtnToggle();
       }
     },
     //function för previous-knapp
@@ -33,8 +36,19 @@ createApp({
       if (this.currentPage >= this.totalPages) {
         this.currentPage--;
         this.displayUsers(this.currentPage);
+        this.previousBtnToggle();
       }
     },
+    
+    nextBtnToggle()
+    {
+        this.nextBtn = this.nextBtn === 'clicked' ? 'unclicked' : 'clicked';
+        this.previousBtn = this.previousBtn === 'unclicked' ? 'clicked' : 'unclicked';
+    },
+    previousBtnToggle(){
+        this.nextBtn = this.nextBtn === 'unclicked' ? 'clicked' : 'unclicked';
+        this.previousBtn = this.previousBtn === 'clicked' ? 'unclicked' : 'clicked';
+    }
   },
   //
   mounted() {

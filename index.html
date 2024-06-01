@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="style.css" />
     <title>Vendre code project</title>
   </head>
@@ -16,14 +16,10 @@
             <a :href="'mailto:' + user.email">{{user.email}}</a>
           </div>
         </div>
-        <div></div>
-        <div id="button-container"><Button @click="displayPreviousEmployee">Previous</Button> 
-            <button @click="displayNextEmployees">next</button>
-        </div>
       </div>
-
-
-
+      <div id="button-container"><Button @click="displayPreviousEmployee" :Class="previousBtn">Previous</Button> 
+        <button @click="displayNextEmployees" v-if="nextBtnToggle" :Class="nextBtn">next</button>
+    </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="main.js"></script>
   </body>

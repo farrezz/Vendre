@@ -10,9 +10,8 @@ body {
     rgba(238, 174, 202, 1) 0%,
     rgba(148, 187, 233, 1) 100%
   );
-  height: 100svh;
-  width: 100svw;
-
+  height: 100vh;
+  width: 100vw;
 }
 
 #app {
@@ -21,7 +20,6 @@ body {
   align-items: center;
   height: 100svh;
   width: 100vw;
-
 }
 
 .card-container {
@@ -35,24 +33,21 @@ body {
   gap: 30px;
 }
 .card {
-
-
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-   /* From https://css.glass */
-   background: rgba(255, 255, 255, 0.21);
-   border-radius: 16px;
-   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-   backdrop-filter: blur(12.9px);
-   -webkit-backdrop-filter: blur(12.9px);
-   border: 1px solid rgba(255, 255, 255, 1);
-   /*------------*/
-   justify-self: center;
-   width: 200px;
-   height: 250x;
-
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.21);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.9px);
+  -webkit-backdrop-filter: blur(12.9px);
+  border: 1px solid rgba(255, 255, 255, 1);
+  /*------------*/
+  justify-self: center;
+  width: 200px;
+  height: 250x;
 }
 
 img {
@@ -65,12 +60,17 @@ img {
 a {
   color: white;
   text-decoration: none;
-  font-size: 10px;
+  font-size: 15px;
+}
+a:hover {
+    color: burlywood;
+    text-decoration: none;
+    font-size: 15px;
 }
 
 #displayName {
   color: white;
-  font-size: 12px;
+  font-size: 23px;
 }
 
 #text-container {
@@ -80,19 +80,116 @@ a {
   align-items: center;
 }
 
-#button-container
-{
-    width: 100%;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin: 50px;
+#button-container {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  gap: 50px;
+  margin: 50px;
 }
 
-button{
-    border-radius: 10px;
-    width: 100px;
-    background-color: transparent;
-    border: solid 1px rgba(255, 255, 255, 1) ;
+button {
+  border-radius: 16px;
+  width: 100px;
+  background-color: transparent;
+  border: solid 1px rgba(255, 255, 255, 1);
 }
+
+button:hover {
+  background: rgba(255, 255, 255, 0.21);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.9px);
+  -webkit-backdrop-filter: blur(12.9px);
+}
+
+.clicked {
+    opacity: 0; 
+}
+.unclicked {
+    opacity: 1;
+}
+
+/*Ipad air (820 X 1180)*/
+@media (max-width: 1024px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px; 
+        justify-content: center;
+        align-items: center;
+        height: 1000px;
+      }
+
+    .card {
+        width: 100%; /* Full width on small screens */
+        padding: 15px; /* Adjust padding */
+        min-height: 350px; /* Adjust minimum height for phones */
+        max-height: 450px; /* Adjust maximum height for phones */
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+
+      }
+    #displayName {
+      font-size: 20px; /* Adjust font size for tablets */
+    }
+
+    a {
+      font-size: 11px; /* Adjust font size for tablets */
+    }
+
+    #button-container {
+        flex-direction: row; /* Stack buttons vertically */
+        gap: 10px; /* Adjust gap between buttons */
+        margin-top: 40px; /* Adjust margin */
+      }
+
+    button {
+      padding: 8px; /* Adjust button padding for tablets */
+    }
+  }
+
+
+  /*Iphone 14pro max*/
+  @media (max-width: 480px) {
+    .card-container {
+      grid-template-columns: repeat(2, 1fr); /* Single column on phones */
+      justify-content: center;
+      margin: 2px; /* Reduce padding */
+      gap: 8px; /* Reduce gap */
+    }
+  
+    .card {
+      width: 100%; /* Full width on small screens */
+      padding: 15px; /* Adjust padding */
+      min-height: 180px; /* Adjust minimum height for phones */
+      max-height: 250px; /* Adjust maximum height for phones */
+    }
+  
+    img {
+      width: 80px; /* Smaller images on phones */
+      height: 80px;
+    }
+  
+    a {
+      font-size: 10px; /* Smaller font size */
+    }
+  
+    #displayName {
+      font-size: 18px; /* Smaller font size */
+    }
+  
+    #button-container {
+      flex-direction: row; /* Stack buttons vertically */
+      gap: 10px; /* Adjust gap between buttons */
+      margin-top: 40px; /* Adjust margin */
+    }
+  
+    button {
+      width: 80px; /* Smaller buttons */
+    }
+  }
+  
