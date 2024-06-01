@@ -39,7 +39,6 @@ createApp({
         this.previousBtnToggle();
       }
     },
-    
     nextBtnToggle()
     {
         this.nextBtn = this.nextBtn === 'clicked' ? 'unclicked' : 'clicked';
