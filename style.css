@@ -60,15 +60,15 @@ a {
 }
 
 a:hover {
-    color: #00b4d8;
-    text-decoration: none;
-    font-size: 15px;
+  color: #00b4d8;
+  text-decoration: none;
+  font-size: 15px;
 }
 
 #displayName {
   color: white;
   font-size: 23px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
 }
 
@@ -90,7 +90,7 @@ a:hover {
 }
 
 button {
-font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   border-radius: 16px;
   width: 100px;
   height: 30px;
@@ -107,99 +107,96 @@ button:hover {
 }
 
 .clicked {
-   color: #4f4f4f;
-   background-color: #9B9B9B 
+  color: #4f4f4f;
+  background-color: #9b9b9b;
 }
 .unclicked {
-color: white;
+  color: white;
 }
 
 /*Ipad air (820 X 1180)*/
 @media (max-width: 1024px) {
-    .card-container {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 10px; 
-        justify-content: center;
-        align-items: center;
-        
-      }
-
-    .card {
-        width: 200px;
-        padding: 15px; 
-        min-height: 350px; 
-        max-height: 450px; 
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-
-      }
-    #displayName {
-      font-size: 20px;
-    }
-
-    a {
-      font-size: 11px; 
-    }
-
-    #button-container {
-        flex-direction: row;
-        gap: 10px; 
-        margin-top: 40px; 
-      }
-      
-      #text-container{
-        display: flex;
-        justify-content: center;
-      }
-
-    button {
-      padding: 8px;
-    }
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
   }
 
-  /*Ipad air (1180 X 820) horizontally*/
+  .card {
+    width: 200px;
+    padding: 15px;
+    min-height: 350px;
+    max-height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  #displayName {
+    font-size: 20px;
+  }
+
+  a {
+    font-size: 11px;
+  }
+
+  #button-container {
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 40px;
+  }
+
+  #text-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  button {
+    padding: 8px;
+  }
+}
+
+/*Ipad air (1180 X 820) horizontally*/
 @media (max-width: 1180px) {
 
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
 
-  
-    .card-container {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 10px; 
-        justify-content: center;
-        align-items: center;
-      }
+  .card {
+    width: 200px;
+    height: 280px;
+    padding: 15px;
+    min-height: 200px;
+    max-height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  #displayName {
+    font-size: 20px;
+  }
 
-    .card {
-        width: 200px; 
-        height: 280px;
-        padding: 15px; 
-        min-height: 200px;
-        max-height: 450px;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-
-      }
-    #displayName {
-      font-size: 20px; 
-
-    a {
-      font-size: 11px;
+    a 
+    {
+      font-size: 14px;
     }
 
     #button-container {
-        flex-direction: row;
-        gap: 10px; 
-        margin-top: 40px; 
-      }
-      
-      #text-container{
-        display: flex;
-        justify-content: center;
-      }
+      flex-direction: row;
+      gap: 10px;
+      margin-top: 40px;
+    }
+
+    #text-container {
+      display: flex;
+      justify-content: center;
+    }
 
     button {
       padding: 8px;
@@ -208,47 +205,39 @@ color: white;
     }
   }
 
-
   /*Iphone 14 Pro max*/
   @media (max-width: 430px) {
-
     .card-container {
-      grid-template-columns: repeat(2, 1fr); 
+      grid-template-columns: repeat(2, 1fr);
       justify-content: center;
-       
     }
-  
+
     .card {
-      height: 150px;
-      width: 120px;
+      height: 170px;
+      width: 150px;
     }
-  
+
     img {
-      width: 80px;
-      height: 80px;
+      width: 110px;
+      height: 110px;
     }
-  
+
     a {
-      font-size: 8px;
+      font-size: 10px;
     }
-  
+
     #displayName {
-      font-size: 16px;
+      font-size: 14px;
       text-align: center;
     }
-  
+
     #button-container {
       flex-direction: row;
       gap: 10px;
-
     }
-  
+
     button {
       width: 80px;
     }
   }
 
-
-
-}
-  
