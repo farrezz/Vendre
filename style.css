@@ -62,7 +62,7 @@ a {
 a:hover {
   color: #00b4d8;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 #displayName {
@@ -107,11 +107,12 @@ button:hover {
 }
 
 .clicked {
-  color: #4f4f4f;
-  background-color: #9b9b9b;
+  color: white;
+  background-color: rgb(108, 117,125, 0.4);
 }
 .unclicked {
   color: white;
+  background-color: rgb(169, 116, 184, 0.6);
 }
 
 /*Ipad air (820 X 1180)*/
@@ -122,6 +123,10 @@ button:hover {
     gap: 10px;
     justify-content: center;
     align-items: center;
+  }
+
+  #app{
+    height: 100svh;
   }
 
   .card {
