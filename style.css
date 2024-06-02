@@ -62,7 +62,7 @@ a {
 a:hover {
   color: #00b4d8;
   text-decoration: none;
-  font-size: 18px;
+  transition: 0.8s;
 }
 
 #displayName {
